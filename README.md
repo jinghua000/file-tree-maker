@@ -1,5 +1,7 @@
 # file-tree-maker
 
+[![npm module](https://badge.fury.io/js/file-tree-maker.svg)](https://www.npmjs.com/package/file-tree-maker)
+
 ## Introduction
 
 Make the file tree recursively. 
@@ -22,13 +24,15 @@ makeTree(options) // => pass the `configuration`, and return the `result`, see n
 
 ### entry - `string` 
 
-Path of the file or the directory, fullpath recommended.
+Path of the file or the directory, absolute path is recommended.
 
 > e.g. - `absolute/path/my/dir`
 
 ### exclude - `Array<RegExp>`
 
-The **fullpath** matched one of the supplied regular expressions will be skipped.
+The **fullpath** of the object matched one of the supplied regular expressions will be skipped.
+
+And do no effect to `entry` option.
 
 > e.g. - `[/node_modules/, /\.ingore/]`
 
@@ -43,5 +47,7 @@ The **fullpath** matched one of the supplied regular expressions will be skipped
 }
 ```
 
-## Full Demo
+## Tests
+
+`yarn test`
 
